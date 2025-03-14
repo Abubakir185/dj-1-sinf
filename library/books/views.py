@@ -51,7 +51,6 @@ class BookDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
     
-
 # class AuthorAPIView(APIView):
 #     def get(self, request):
 #         Authors = Author.objects.all()
@@ -93,5 +92,6 @@ class AuthorDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
  
+
 def home(request):
     return HttpResponse("Hello")

@@ -52,7 +52,7 @@ class BookSerializer(ModelSerializer):
         genre = attrs['genre']
         price = attrs['price']
 
-        if int(price) == 0:
+        if int(price) <= 0:
             raise ValidationError("Narx o dan katta bo'lishi kerak")
         
         if genre:
